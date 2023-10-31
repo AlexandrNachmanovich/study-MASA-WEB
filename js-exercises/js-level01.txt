@@ -1,0 +1,81 @@
+// Assignments, arithmetics, console.log(),
+// document.write(), string concatenation
+
+Examples:
+------------------------------------------
+Set variable firstVar and assign it an integer.
+let firstVar = 17
+Set variable secondVar and assign it an integer.
+let secondVar = 18
+Create variable rem and assign it a remainder of
+    the division of firstVar by secondVar.
+let rem = firstVar % secondVar;
+Show it at the console.
+console.log("The remainder of the division of " 
+             + firstVar + " by " + secondVar 
+             + " is " + rem)
+Show it at the HTML page, using document.write()
+        and some header tags inside.
+document.write("<h3>The remainder of the division of " 
+             + firstVar + " by " + secondVar 
+             + "<br>is " + rem + </h3>)        
+
+1. Set variable num1 and assign it a number.
+   Set variable num2 and assign it a number.
+   Set variable sum and assign it a sum of num1 and num2
+   Show it at the console
+   Set variable dif and assign it a difference between num1 and num2
+   Show it at the console
+
+2. Set variable a and assign it a number.
+   Set variable b and assign it a number.
+   Set variable prod and assign it a product (the result 
+       of the multiplication) of a and b.
+   Show it at the console.
+   Set variable quot and assign it a quotient (the result 
+       of the division) of a by b
+   Show it at the console
+
+3. Set variable x and assign it a number.
+   Set variable y and assign it a number.
+   Set variable pow and assign it a result of
+        the rising x into power y.
+   Show it at the console.
+   Show it at the HTML page, using document.write()
+
+4. Set variable num3 and assign it an integer.
+   Set variable num4 and assign it an integer.
+   Set variable remain and assign it a remainder of
+        the division of num3 by num4.
+   Show it at the console.
+   Show it at the HTML page, using document.write()
+        and some header tags inside.
+
+5. Set variables m, n, o, p, assign them numeric values.
+   Set variable calculation,
+      subtract from m the division of n by o and 
+      multiply all this by p.
+   Show the calculation result at the HTML page, 
+        using document.write() 
+        and some header tags inside.
+
+6. Set variables firstName and lastName, and assign
+   them some firstName and some lastName respectively.
+   Set variable grade and assign it an integer.
+   Show at the html page a statement that will look like 
+   "<firstName> <lastName>, your grade is <grade>",
+   for example:
+   "Moshe Rosenfield, your grade is 87"
+
+7. Set variables firstN and lastN, and assign
+   them some firstName and some lastName respectively.
+   Set a variable mrOrMs and assignt it a value "Mr" 
+   or "Ms".
+   Set variable hour and assign it an integer.
+   Set variable day and assign it a name of a week day.
+   Show at the html page a statement that will look like 
+   "<mrOrMs>. <lastName>, you've got an appointment
+   to the doctor at <day> at <hour> o'clock exactly",
+   for example:
+   "Ms. Jane Smith, you've got an appointment to 
+    the doctor at Thirsday at 5 o'clock exactly"

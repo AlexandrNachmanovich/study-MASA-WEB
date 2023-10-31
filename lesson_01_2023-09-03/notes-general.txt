@@ -1,0 +1,8 @@
+de10.fcomet.com:2083
+
+
+username: science3
+password: Yalla123456!
+
+https://tigris.scienceart.co.il/username/foldername
+

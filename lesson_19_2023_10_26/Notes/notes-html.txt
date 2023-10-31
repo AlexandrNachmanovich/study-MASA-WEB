@@ -1,0 +1,36 @@
+______________________________________________
+HTML - HyperText Markup Language
+
+Responsible for the content
+
+HTML entities - special characters, like
+     &nbsp; &lt; &gt; &copy;
+
+______________________________________________
+SEMANTICS
+<em>, <strong> - only for the important words
+
+<div> — has no meaning
+If you can, use better: 
+     <section>
+     <main> — main section
+     <header>, <footer>
+     <nav> — nivigation
+     <aside> — side sections
+     <article>
+     <figure> — cards of products for example
+
+______________________________________________
+INLINE, BLOCK
+inline - sits inside the line,
+         it's size as the size of it's content,
+         width and height should not work
+
+block - starts from new line and has new line after it,
+        it's height is as the height of it's content,
+        tryes to take all the width,
+        we can change it's width and height
+
+examples of inline: span, a, em, strong, inline
+
+examples of block: h1-h6, p, ul, ol, li

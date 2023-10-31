@@ -1,0 +1,28 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+figure {
+  float: left;
+  width: 200px;
+  padding: 1rem;
+  border: 1px solid green;
+  border-radius: 1rem;
+}
+
+.output {
+  background-color: lightgreen;
+  color: lightseagreen;
+  font-size: 1.5rem;
+  height: 5rem;
+  text-align: center;
+  line-height: 5rem;
+  padding: 0.7rem;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.7rem;
+  margin-top: 1rem;
+}

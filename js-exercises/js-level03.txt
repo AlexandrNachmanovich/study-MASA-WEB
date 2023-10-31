@@ -1,0 +1,99 @@
+// functions, return
+
+Example:
+---------------------------------
+Create a function sum33() that gets one number 
+as a parameter and shows adding 33 to it.
+
+function sum33(n) {
+    console.log(n + ' + 33 = ' + (n + 33))
+}
+
+Create a function sum222() that gets one number 
+   as a parameter and returns it summed with 222.
+
+function sum222(num) {
+    return num + 222;
+} 
+
+1. Create a function mult5() that gets one number 
+   as a parameter and shows it's multiplication by 5.
+
+   Call this function 3 times and see the results:
+   mult5(41);        // result: 41 * 5 = 205
+   mult5(-1.2);      // result: -1.2 * 5 = -6
+   let num1 = 7.77;
+   mult5(num1);      // result: 7.77 * 5 = 38.85
+
+2. Create a function mult7() that gets one number 
+   as a parameter and returns it multiplied by 7.
+
+   Call this function 4 times and see the results:
+   console.log(mult7(41));          // result: 287
+   console.log(mult7(-1.2));        // result: -8.4
+   let num2 = 7.77, num3 = 25;
+   console.log(mult7(num2));        // result: 54.39
+   console.log(mult7(num2) + num3); // result: 79.39
+
+3. Create a function pow3plus3() that gets one number 
+   as a parameter and shows it's rising to power of 3 
+   and adding 3 to it.
+
+   Call this function 3 times and see the results:
+   pow3plus3(-5);        // result: -5 ** 3 + 3 = -122
+   pow3plus3(4);         // result: 4 ** 3 + 3 = 67
+   let num4 = 2.2;
+   pow3plus3(num4);      // result: 2.2 ** 3 = 13.648
+
+4. Create a function sqrtMinus10() that gets one number 
+   as a parameter and returns it's square root minus 10.
+
+   Call this function 5 times and see the results:
+   console.log(sqrtMinus10(81));                       // result: -1
+   console.log(sqrtMinus10(225));                      // result: 5
+   let num5 = 1024, num6 = -25;
+   console.log(sqrtMinus10(num5));                     // result: 54.39
+   console.log(sqrtMinus10(num5) + num6);              // result: -3
+   let num7 = 6.25, num8 = 1.21;
+   console.log(sqrtMinus10(num7) + sqrtMinus10(num8)); // result: -15.6
+
+5. Create a function avg2() that gets 2 numbers
+   and shows the calculation of the average
+   with document.write().
+
+   Call this function twice.
+
+6. Create a function avg3() that gets 3 numbers
+   and returns their average.
+
+   Call this function 3 times:
+   document.write(avg3(30,44,46));
+   document.write(avg3(num1,num2,num3));
+   
+   document.write(avg3(num4,num5,num6) + 'is a result of avg3(' 
+                  + num4 + ',' + num5 + ',' + num7 + ')');
+
+7. Create a function useColors() that gets 2 strings - colors,
+   and writes the next statement:
+   "There was a <color1> sun in the <color2> sky".
+
+   Call the function 2 times:
+   useColors('red','grey'); // result: There was a red sun in the grey sky
+   let str1 = 'green', str2 = 'pink';
+   useColors(str1,str2); // result: There was a green sun in the pink sky
+
+8. Create a function whatColor() that gets 1 string - vegetable,
+   and returns what color it is. If it is a tomato or pepper, 
+   the function returns "red", if it is cucumber or cabbage, 
+   the function returns "green", if it is carrot or pumpkin, 
+   the function returns "orange". If it is some other 
+   vegetable, the function returns "unknown".
+
+   Call this function twice.
+
+9. Use toUpperCase() or toLowerCase() and improve whatColor() 
+   the way that if it will get parameters in different case,
+   like 'Tomato' or 'TOMAto' or ... - it will be able 
+   still find an appropriate color
+
+

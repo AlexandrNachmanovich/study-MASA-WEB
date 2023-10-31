@@ -1,0 +1,45 @@
+______________________________________________
+OPERATORS
+arithmetic operators: + - * / ** %
+concatenation operator: +
+operator typeof – gets the type of the value
+comparison operators:
+=== (!==) – strict (in)equality
+== (!=) – abstract (in)equality
+>, <, >=, <=
+______________________________________________
+FUNCTIONS:
+function is a prepared code block
+
+Example: 
+console.log();
+
+To clear the console: clear();
+
+______________________________________________
+DATA TYPES: 
+Primitive data types:
+— number: 5, 67.0, -0.03
+— string: "5 + 5 = ", "Dani and Yosi", `Yosi and Dani`
+— empty string: ""
+
+
+
+
+______________________________________________
+VARIABLES:
+simple variable — it is an adress in the memory (RAM)
+
+______________________________________________
+OBJECTS
+chair {
+  width: 57,
+  height: 92,
+  color: taburet,
+  throw: function() {console.log("throwing the chair")}
+}
+
+chair.width // 57
+chair.throw() // throwing the chair
+
+More examples: 

@@ -1,0 +1,31 @@
+! - create initial code in .html
+
+Install extensions:
+  Live server
+  Auto Rename Tag
+
+File -> Auto Save v
+
+Ctrl-Z - cancel action
+Ctrl-y - redo action
+
+Alt-Shift Arrow Up/Down
+
+Alt-z - wrap or unwrap long text
+
+lorem
+lorem6
+lorem10*3
+
+span.blue => <span class="blue"></span>
+span#football => <span id="football"></span>
+
+Ctrl-space - if you should see the options of VS CODE command
+
+Ctrl-D - selects identical strings
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/checkbox.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <figure>
+        <label for="star-wars">
+          <!-- <input type="checkbox" name="movies" id="star-wars" /> -->
+          <input
+            type="checkbox"
+            onchange="ISeeYou(this,'./img/star-wars.jpg'); console.log('lala');"
+            name="movies"
+            id="star-wars" />
+
+          Star Wars
+        </label>
+        <div class="frame">
+          <img src="./img/star-wars.jpg" alt="star wars" class="invisible" />
+        </div>
+      </figure>
+
+      <figure>
+        <label for="star-trek">
+          <input type="checkbox" name="movies" id="star-trek" />
+          <!-- <input type="checkbox" onchange="ISeeYou(this,'./img/star-trek.jpg');" name="movies" id="star-trek"> -->
+
+          Star Trek
+        </label>
+        <div class="frame">
+          <img src="./img/star-trek.jpg" alt="star trek" class="invisible" />
+        </div>
+      </figure>
+    </div>
+    <script>
+      // const checkboxes = document.querySelectorAll('[type="checkbox"]');
+      const checkboxes = document.querySelectorAll('[name="movies"]');
+      const images = document.querySelectorAll("figure>div>img");
+      // const imgStarWars = document.querySelector('[src="./img/star-wars.jpg"]');
+
+      checkboxes.forEach((checkbox, ix) => {
+        checkbox.addEventListener("change", () => {
+          images[ix].classList.toggle("invisible");
+          // checkbox.checked ? images[ix].classList.remove("invisible") : images[ix].classList.add("invisible");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+/* nav > .left > li — li is a closest  descendant of .left, 
+.left is a closest descenant of nav */
+
+nav li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+nav > .left > li {
+  float: left;
+}
+
+nav > .right > li {
+  float: right;
+}

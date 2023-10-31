@@ -1,0 +1,34 @@
+body {
+  background: #000;
+}
+
+.first {
+  width: 400px;
+  /* red green blue */
+  background: #f00;
+  padding: 10px;
+}
+
+.second {
+  width: 400px;
+  padding: 10px;
+  background: #0f0;
+}
+
+.same {
+  width: 400px;
+  padding: 10px;
+  background: rgb(0, 26, 255);
+}
+
+.second img {
+  width: 100%;
+}
+
+.first img {
+  width: 100%;
+}
+
+.same img {
+  width: 100%;
+}

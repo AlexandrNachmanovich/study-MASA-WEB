@@ -1,0 +1,71 @@
+// Replacing a primitive variable value,
+// using Math and String functions 
+
+Examples:
+------------------------------------------
+Set variable a and assign it a number. 
+let a = 25;
+Now assign it square root from it's value rised in power of 3
+plus 121.
+a = Math.sqrt(a) ** 3 + 121;
+consoel.log('Math.sqrt(a) ** 3 + 121 = ' + a);
+
+Set variable b and assign it a word.
+let b = 'strange';
+Now assign to b the 2nd letter of the word plus 5th letter of the word.
+b = b[1] + b[4];
+console.log('b[1] + b[4] = ' + b);
+
+Set variable c and assign it a word in upper case.
+let c = 'FLOWER';
+Now make c to be in lower case.
+c = c.toLowerCase();
+
+1. Set variable num1 and assign it a number. 
+   Replace it by it's value plus 15.
+   Show the result at the console.
+
+2. Set variable num2 and assign it a number. 
+   Now assign it it's value,
+   subtracted by 77.
+   Show the result at the console.
+
+3. Set variable num3 and assign it a number. 
+   Now assign it it's value multiplied by 5 plus 5.
+
+4. Set variable num4 and assign it a number. 
+   Now assign it square root from it's value rised in power of 5
+   minus 333.
+
+5. Use num1, num2, num3, num4 for calling Math.max and 
+   assign the result to num4.
+
+6. Use num1, num2, num3 for calling Math.min and assign 
+   the result to num3.
+
+7. Set variable num5 and assign it an integer
+   larger than 1000.
+   Now assign it it's value,
+   subtracted by the remainder of it's division by 10,
+   and the whole divided by 10.
+   CHALLENGE: What happened to the original number?
+
+8. Set variable str1 and assign it a word.
+   Now assign to str1 the 1st letter of the word.
+
+9. Set variable str2 and assign it a word.
+   Now assign to str2 the 3rd letter of the word.
+
+10. Set variable str3 and assign it a word.
+   Now assign to str3 the 3rd letter of the word 
+   plus the 4th letter of the word.
+
+11. Set variable str4 and assign it a word.
+   Now assign to str4 the 2nd letter of the word 
+   plus the last letter of the word.
+
+12. Set variable str5 and assign it a word in lower case.
+   Now make str5 to be in upper case.  
+
+13. Set variable str6 and assign it a word in upper case.
+   Now make str6 to be in lower case.  

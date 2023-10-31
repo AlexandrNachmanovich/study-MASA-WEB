@@ -1,0 +1,30 @@
+0. Create at the hosting tigris/your-name/hw05-advanced dir
+   and put there the homework results
+
+1. Floyd triangle. Input: how many rows should contain the triangle.
+   The triangle should consist of sequential numbers.
+   For example, if the input is 5, the triangle:
+   1
+   2  3
+   4  5  6
+   7  8  9  10
+   11 12 13 14 15
+
+2. a) indexOf() + while challenge. Write function findAll(),
+   that gets a word and a letter.
+   Go over the word and get all the locations of the given letter 
+   and return them in an array. 
+
+   For example
+
+   findAll('archaebacteria','a') returns [0,4,7,13]
+   findAll('abracadabra','a') returns [0,3,5,7,10]
+   findAll('encyclopedy','m') returns []
+   findAll('encyclopedy','c') returns [2,4]
+   findAll('encyclopedy','c') returns [2,4]
+   findAll('error','e') returns [0]
+
+   Check the function with all the above pairs of word and letter.
+
+   b) Which other way (not indexOf()) could you use to get 
+      the same results?

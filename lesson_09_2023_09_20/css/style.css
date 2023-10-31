@@ -1,0 +1,31 @@
+/* :root — pseudoclass, almost exactly the same as "html" */
+/* html — the whole document, :root — the whole document */
+:root {
+  --label-width: 13ch;
+  --label-font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  --scale-header: 1.05;
+  --input-padding: 10px;
+  --input-background-color: wheat;
+}
+
+.right-to-left {
+  direction: rtl;
+}
+
+label {
+  display: inline-block;
+  width: var(--label-width);
+  font-family: var(--label-font-family);
+}
+
+h1:hover,
+h2:hover,
+h3:hover {
+  transform: scale(var(--scale-header));
+}
+
+input {
+  padding: var(--input-padding);
+  background-color: var(--input-background-color);
+}
