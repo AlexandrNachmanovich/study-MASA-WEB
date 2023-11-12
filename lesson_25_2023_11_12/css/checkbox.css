@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  max-width: 98vw;
+}
+
+.container div,
+.container figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container figure .frame {
+  border: 2px solid salmon;
+}
+
+.container figure img {
+  max-width: 200px;
+}
+
+.invisible {
+  opacity: 0;
+  /* display: none; */
+}

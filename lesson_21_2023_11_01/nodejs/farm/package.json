@@ -1,0 +1,14 @@
+{
+  "name": "farm",
+  "version": "1.0.0",
+  "description": "Example of Express and Templates",
+  "main": "farm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

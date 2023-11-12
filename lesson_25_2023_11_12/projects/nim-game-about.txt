@@ -1,0 +1,70 @@
+Check at Wikipedia
+
+HTML - input for the maximum 
+     - explain the rules, what are the valid inputs
+     - "Start Game" button that initializes the game
+     - input for adding a number 
+     - output (outpus) for seeing the machine turns,
+       and the overall game flow
+       (show that the machine thinks in it's turn - use setTimeout())
+
+Mode1 
+
+    - machine randomly chooses who plays first
+    - Whe the machine plays, it chooses randomly 
+      the number to add (for example, from the range from 1 to 9)
+    - If this is the last winning step for the machine, it
+      cannot add random number.
+      For example the sum before it's turn is 94 - here we should
+      calculate the difference to 100
+    - validate the inputs of the player:
+
+      - it is an positive integer
+      - it is in the range from 1 to 9
+      - in the winning position, disable adding numbers that
+        make sum greater than 100
+
+    --   Check if the machine or the player has already won
+
+Mode2
+
+    - human chooses who plays first
+    - machine uses winning stratege and wins if can
+
+  Turn of computer
+  ----------------
+  Global variable "sum". 
+
+  Try to get to the next tenth:
+
+    -- check if it is already some round number:
+
+       if (sum % 10 === 0)
+
+          it is already round, so
+            machine choosing to add some random number from 1 to 9
+
+    -- if it is not, complete to the round number:
+
+        toAdd = 10 - sum%10
+ 
+
+    --   Check if the machine has already won
+
+    PAY ATTENTION: there will be functions common for both 
+                Mode 1 and Mode 2 (except of Machine Turn)
+
+Mode3 - optional 
+
+    - player can choose the max number to add
+    - we should invent the winning strategy
+
+Mode 4 - optional - original game with two sets of numbers
+       (stacks of items)
+
+Mode 5 - more than 2 players
+
+Optional (shoud use createElement) - illustrate the game
+with disappearing stones or matches or sticks ...
+
+

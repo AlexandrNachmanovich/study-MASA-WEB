@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/timers.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="blink timeout limegreen">
+        <p>Going to change the color in&nbsp;<span>4</span>&nbsp;seconds ...</p>
+      </div>
+
+      <div class="blink interval blue">
+        <p>
+          Changing color each&nbsp;<span class="sec">0.5</span>&nbsp;seconds for
+          <span class="times">20</span> times
+        </p>
+      </div>
+
+      <div class="seconds interval salmon"><p>&nbsp;0 sec&nbsp;</p></div>
+    </div>
+
+    <div class="container buttons">
+      <button class="stop-change-color salmon">Stop Change Color</button>
+      <button class="stop-blinking wheat">Stop Blinking</button>
+      <button class="stop-blinking-after-times blue">
+        Stop Blinking After&nbsp;<span class="times"></span>&nbsp;Times
+      </button>
+      <button class="stop-after-seconds limegreen">
+        Stop After&nbsp;<span class="sec"></span>&nbsp;Seconds
+      </button>
+    </div>
+    <script src="../js/timers.js"></script>
+  </body>
+</html>

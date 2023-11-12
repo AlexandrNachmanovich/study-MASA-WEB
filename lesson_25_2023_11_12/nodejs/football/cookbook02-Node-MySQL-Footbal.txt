@@ -1,0 +1,311 @@
+1. Download Xamp -> Install XAMPP + MySQL
+
+2. To open phpMyAdmin:
+
+   Windows: Start -> Xampp Control Panel -> XAMPP Start ->
+                  MySQL Start -> MySQL Admin
+
+    Mac: finder -> applications -> xampp -> manager-osx.app ->
+                 XAMPP Start -> MySQL Start -> http://localhost/phpmyadmin
+
+3. CREATE DATABASE football COLLATE='utf8mb4_general_ci';
+
+   In SQL we should put strings of data into single quotes. '''
+   
+4. USE football;
+
+CREATE TABLE football.players (id INT NOT NULL , 
+                               first_name VARCHAR(32) NOT NULL , 
+                               `last_name` VARCHAR(32) NOT NULL , 
+                               `image` VARCHAR(300) NULL , 
+                               `position` VARCHAR(30) NOT NULL , 
+                               `number` TINYINT NOT NULL , 
+                               `citizenship` VARCHAR(50) NOT NULL ,
+                               `rating` TINYINT NULL );
+
+DELETE FROM players;
+
+INSERT INTO players 
+(id, `first_name`, `last_name`, `image`, `position`, `number`, `citizenship`, `rating`) 
+VALUES 
+(1, 'Diego', 'Maradona', NULL, 'forward', 10, 'Argentina', NULL);
+
+INSERT INTO players 
+(id, `first_name`, `last_name`, `position`, `number`, `citizenship`) 
+VALUES 
+(2, 'Lev', 'Yashin', 'goalkeeper', 1, 'USSR');
+
+INSERT INTO players 
+(position, id, rating, `first_name`, `last_name`, `number`, `citizenship`) 
+VALUES 
+('forward', 3, 86, 'Christiano', 'Ronaldo',  7, 'Portugal');
+
+INSERT INTO players 
+VALUES 
+(4, 'Lionel', 'Messi', NULL, 'forward', 10, 'Argentina', 90);
+
+INSERT INTO players 
+(id, `first_name`, `last_name`, `image`, `position`, `number`, `citizenship`, `rating`) 
+VALUES 
+(5, 'Pele', 'Pele', NULL, 'forward', 10, 'Brazil', NULL),
+(6, 'Victor', 'Anopka', NULL, 'defender', 1, 'Russia', NULL),
+(7, 'Alexandr', 'Kokorin', NULL, 'forward', 9, 'Russia', NULL);
+
+ UPDATE players
+    SET rating = 69
+  WHERE first_name = 'Victor' AND last_name = 'Anopka';
+
+5. If we want to move or to copy the database, we could use "Export"-"Import".
+
+PHPMyAdmin -> Choose or Table or DataBase or the whole Server -> "Export" -> 
+   use the default options (SQL, etc.) -> click the button Export
+
+Edit the file if needed, for example, put there 
+
+CREATE DATABASE football_copy COLLATE='utf8mb4_general_ci';
+
+USE football_copy;
+
+PHPMyAdmin -> Import ...
+
+6. SELECT QUERY
+----------------------------------------------------------------
+SELECT DOES NOT CHANGE NOTHING IN THE DATABASE!!!!!
+
+SELECT - gets data, examples:
+   SELECT CURRENT_DATE;
+   SELECT CURRENT_USER;
+
+SELECT * - get all the columns
+
+FROM - from which tables
+
+    example:
+
+    SELECT * FROM players; // got the RESULT SET of 7 rows
+
+    SELECT first_name, last_name, rating FROM players;
+    // got the result set of 7 rows
+
+    SELECT position, number, last_name, citizenship 
+      FROM players;
+
+We can add scalar values (strings, numbers) to our queries, like:
+
+    SELECT 'Dear Mr. ',first_name, last_name, 
+           'we\'re pleased to invite you ...', 7 
+      FROM players;
+
+We can use arithmetics with the numbers:
+
+    SELECT first_name, last_name, (rating+1)*1.2 
+      FROM players;
+
+Using ALIASEs for the column names:
+
+    SELECT 'Dear Mr. ' first_part, 
+       first_name, 
+       last_name, 
+       'we\'re pleased to invite you ...' last_part, 
+       7 seven 
+      FROM players;
+
+    SELECT first_name AS firstName, 
+            last_name AS lastName, 
+            (rating+1)*1.2 AS newRating 
+            FROM players;
+
+We can use SQL FUNCTIONS in SELECT:
+
+   SELECT CONCAT('Dear Mr. ', first_name, ' ',
+       last_name, ', we\'re pleased to invite you ...' ) AS invitation
+      FROM players;
+
+   /* MISSION:
+Change the current statement, show the initials of the name, the first name in upper case,
+the last name in lower case, round the SQRT() of rating to 2 digits after a dot and give alias for each column, like
+
+initials     firstName    lastName   rating
+ 
+ D.M.         DIEGO        maradona  99
+
+
+SELECT SUBSTR(first_name,1,1), first_name,
+       SUBSTR(last_name,1,3), last_name
+      FROM players;
+*/
+
+-- one row comment
+/* block 
+comment */
+
+WHERE - filter data 
+
+    SELECT first_name, last_name, rating 
+      FROM players
+     WHERE first_name = 'Victor' AND last_name = 'Anopka';
+
+7. Open Terminal or Stand alone "Git Bash":
+
+$ cd nodejs/football
+
+$ npm init
+
+It results in the following in package.json:
+
+{
+  "name": "football",
+  "version": "1.0.0",
+  "description": "CRUD operations",
+  "main": "football.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+8. Add to package.json the script for the "start":
+
+{
+  "name": "football",
+  "version": "1.0.0",
+  "description": "CRUD operations",
+  "main": "football.js",
+  "scripts": {
+    "start": "nodemon football.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+Now we can run our server with "npm start"
+
+9. Install express, package for the mysql client, express templating enjine:
+
+$ npm i express mysql2 ejs
+
+Now package.json has dependencies in it:
+
+{
+  "name": "football",
+  "version": "1.0.0",
+  "description": "CRUD operations",
+  "main": "football.js",
+  "scripts": {
+    "start": "nodemon football.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mysql2": "^3.6.3"
+  }
+}
+
+10. football.js:
+
+const express = require('express');
+const mysql = require('mysql2');
+require('ejs');
+
+const port = 3200;
+
+// creating Express server
+const app = express();
+
+/********************************************
+ * ROUTING
+ ********************************************/
+
+app.get('/', (req, res) => {
+    
+    res.send(`<h1>🚧 👷‍♀️ Football Manager is Under Construnction 👷‍♂️ 🏗️</h1>`)
+    
+})
+
+
+/********************************************
+ * LISTENER
+ ********************************************/
+
+app.listen(port,(err) => {
+
+    console.log(`I am the FOOTBALL MANAGER SERVER, listening on port ${port}`)
+
+})
+
+11. $ npm start
+
+Check in the browser:
+
+127.0.0.1:3200 or
+localhost:3200
+
+12. Create DB object and connect to DB. football.js:
+
+const express = require('express');
+const mysql = require('mysql2');
+require('ejs');
+
+const port = 3200;
+
+// creating Express server
+const app = express();
+
+/********************************************
+ * CREATE DB OBJECT AND CONNECT TO DB
+ ********************************************/
+
+const db = mysql.createConnection({
+    host: "localhost", // or '127.0.0.1'
+    port: "3306", // this is a default, so it is not needed
+    database: "football", // the db adress is a combination of host-port-database
+    user: "root", // for authentication and authorization (we should quickly change it
+                  // to the less powerful user)
+    password: ""
+})
+
+db.connect((err) => {
+
+    if (err) 
+       throw err;
+    // Connection to DB is critical for this server, so if 
+    // it is failed, we should not start the server,
+    // we should handle the error 
+
+    console.log("I am lucky today. 😆 I've connected to DB")
+
+})
+
+/********************************************
+ * ROUTING
+ ********************************************/
+
+app.get('/', (req, res) => {
+    
+    res.send(`<h1>🚧 👷‍♀️ Football Manager is Under Construnction 👷‍♂️ 🏗️</h1>`)
+    
+})
+
+
+/********************************************
+ * LISTENER
+ ********************************************/
+
+app.listen(port,(err) => {
+
+    console.log(`I am the FOOTBALL MANAGER SERVER, listening on port ${port}`)
+
+})
+
+13. MVC — Model View Controller 
+ 
+Model — objects, their connections, direct work with DB
+
+View — html pages (templates)
+
+Controller — connects between View and Model and contains the business logic (our routing, for example)

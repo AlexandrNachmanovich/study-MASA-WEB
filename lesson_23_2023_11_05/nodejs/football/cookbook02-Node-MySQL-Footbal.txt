@@ -1,0 +1,20 @@
+1. Download Xampp -> Install XAMPP + MySQL (via CONTROL)
+
+2. To open phpMyAdmin:
+Windows: Start -> Xampp Control Panel -> XAMPP Start -> MySQL Start -> My phpMyAdmin
+Mac: Finder -> Applications -> XAMPP folder -> manager-osx.app -> Apache Start, MySQL Start -> http://localhost/phpmyadmin in brouser
+
+3. CREATE DATEBASE football COLLATE='utf8mb4_genetal_ci';
+
+In SQL we should put strings of data into single quotes ''. 
+
+4. USE football;
+
+CREATE TABLE football.players (id INT NOT NULL , 
+                               first_name VARCHAR(32) NOT NULL , 
+                               `last_name` VARCHAR(32) NOT NULL , 
+                               `image` VARCHAR(300) NULL , 
+                               `position` VARCHAR(30) NOT NULL , 
+                               `number` TINYINT NOT NULL , 
+                               `cityzenship` VARCHAR(50) NOT NULL , 
+                               `rating` TINYINT NULL ) ENGINE = InnoDB;

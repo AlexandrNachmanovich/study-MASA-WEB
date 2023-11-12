@@ -1,0 +1,20 @@
+2. To check that NodeJS is already installed and which version, run 
+   in the command line (stand alone Git Bash or terminal): 
+
+   $ node --version
+   >node --version
+
+3. To run a file app01.js: 
+
+   $ node app01.js
+
+4. To restart the server when some changes are performed, 
+   we install "nodemon" — it will monitor the changes 
+   and other files and restart the server.
+
+   npm — "node package manager" 
+   i _ install 
+   -g — flag that says "globally"
+
+   $ npn i -g nodemon
+   
