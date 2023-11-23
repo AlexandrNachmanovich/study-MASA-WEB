@@ -1,0 +1,82 @@
+0. Install git (for Git Bash)
+
+For example, from here: https://git-scm.com/downloads
+
+To run Git Bash:
+
+   Option 1:
+      Windows Start -> Git Bash -> Open (or Run as Administrator)
+
+   Option 2:
+
+      Restart VS CODE
+
+      VS CODE -> Terminal -> New Terminal
+        
+        power shell in the terminal is opened 
+
+        Choose Git Bash from the list "v"
+
+   GIT BASH COMMANDS 
+   ----------------------------------------------------------------
+
+   ls - list - shows list of directories and other files in the current directory
+
+   ls data  - shows list of directories and other files in the directory "data"
+
+   cd les17 - change directory to directory les17
+   
+   cd -     - change directory to the previous directory
+
+   cd       - change directory to your user home
+
+   cd ..  - get out from the current directory
+
+   cd ../.. - get out from the current directory and the dir before the current directory
+
+   Ctrl-C - break current command run
+   
+   <tab> - completes the name of the file 
+
+   pwd - check working directory
+
+   
+
+
+
+
+1. Download and install NodeJS:
+
+   Choose even version if you need it for production - it is a stable version
+
+   Choose odd version if you want the latest features - it is not a stable version
+
+
+   Restart VS CODE, restart command line (Git Bash)  
+
+2. To check that NodeJS is already installed and which version, run 
+
+   in the command line (stand alone Git Bash or terminal):
+
+   $ node --version
+
+   > node --version 
+
+3. To run a file app01.js:
+
+   $ node app01.js
+
+
+4. To restart the server when some changes are performed,
+   we install "nodemon" - it will monitor the changes in *.js 
+   and other files and restart the server.
+
+   npm - "node package manager"
+   i - install
+   -g - flag that says "globally"
+
+   $ npm i -g nodemon
+
+
+
+
